@@ -102,5 +102,5 @@ diamonds.summary <- diamonds.sample %>% group_by(clarity) %>%
 
 # Then draw the plot. The error bars should stretch from the mean-error to the mean+error.
 ggplot(data = diamonds.summary) + 
-  geom_col(mapping = aes(x = clarity, y = mean)) + 
+  geom_col(mapping = aes(x = clarity, y = mean, fill = clarity)) + 
   geom_errorbar(mapping = aes(x = clarity, ymin = mean - se, ymax = mean + se))
